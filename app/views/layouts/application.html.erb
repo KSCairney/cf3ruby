@@ -2,22 +2,36 @@
 <html>
 <head>
   <title>Workspace</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
+  
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Courgette', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Comfortaa', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="#about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+            <li><a href="#contact"><span class="glyphicon glyphicon-phone-alt"></span> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </nav>
 
   <%= yield %>
   
-  <footer>
+  <footer class="site-footer">
     &copy; 2017 Bike Berlin
   </footer>
 
