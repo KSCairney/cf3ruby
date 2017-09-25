@@ -23,14 +23,9 @@
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-    <% paragraph_number = 1 %>
-    <% 5.times do %>
-      <p>This is paragraph number <%= paragraph_number %></p>
-      <% paragraph_number = paragraph_number + 1 %>
-    <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<p class="newone"><%= link_to 'New Product', new_product_path %></p>
