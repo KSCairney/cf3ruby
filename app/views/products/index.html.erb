@@ -9,6 +9,7 @@
       <th>Description</th>
       <th>Image url</th>
       <th>Colour</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,17 +23,19 @@
             <a href="#"><h4><%= product.name %></h4></a>
             <p><%= product.description %></p>
             <p>Colour: <%= product.colour %></p>
-            <strong>$64</strong>
+            <strong><%= product.price %></strong>
           </div><!-- /col -->
         <% end %>
       </div><!-- /row -->
     </div><!-- /container -->
+    <br>
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.image_url %></td>
         <td><%= product.colour %></td>
+        <td><%= product.price %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
