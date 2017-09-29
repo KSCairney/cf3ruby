@@ -17,15 +17,7 @@
   <tbody>
     <div class="container-fluid">
       <div class="row">
-        <% @products.each do |product| %>
-          <div class="col-sm-2 col-md-4">
-            <%= image_tag(product.image_url, class: "img-responsive") %>
-            <a href="#"><h4><%= product.name %></h4></a>
-            <p><%= product.description %></p>
-            <p>Colour: <%= product.colour %></p>
-            <strong><%= product.price %></strong>
-          </div><!-- /col -->
-        <% end %>
+        <%= render @products %>
       </div><!-- /row -->
     </div><!-- /container -->
     <br>
