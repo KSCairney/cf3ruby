@@ -3,15 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-    background-color: #4f3a21;
-    color: #ba4343;
+    background-color: #fff;
+    color: #4f3a21;
     font-family: 'Comfortaa', cursive;
     padding-top: 50px;
 }
 
 h1{
     font-family: 'Courgette', cursive;
-    color: white;
+    color: #ba4343;
     text-align: center;
 }
 
@@ -21,6 +21,16 @@ h2 {
 
 img {
     border-radius: 10px;
+}
+
+.item img{
+    text-align: center;
+    margin: auto;
+}
+
+.carousel-caption {
+    color: #fff;
+    weight: 600;
 }
 
 a {
