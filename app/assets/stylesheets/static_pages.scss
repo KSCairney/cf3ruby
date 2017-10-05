@@ -46,6 +46,32 @@ nav-bar {
     background-color: #3d3329;
 }
 
+.holder {
+    background-color: #ba4343;
+    color: #fff;
+    margin-top: 50px;
+    padding: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.holder form input {
+    color: #ba4343;
+    text-align: left;
+}
+
+.outershell {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.form-control {
+    width: 100%;
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -62,4 +88,8 @@ form {
 
 .showback {
     padding-left: 40px;
+}
+
+.row {
+    text-align: left;
 }
