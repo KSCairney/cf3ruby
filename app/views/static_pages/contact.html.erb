@@ -1,5 +1,23 @@
-<h1>Contact</h1>
-<p>This is all still a work in progress. This is my second Ruby-on-Rails project, but undoubtedly my best one.</p>
-<p>Please contact us with any problems via carrier pigeon! Just give the pigeon a note and tell him to take it to Berlin Bikes. He'll know where to go.</p>
+<h1>Contact Us</h1>
 
-<%= link_to "Create a Product", new_product_path %>
+<%= flash[:notice] %>
+
+<%= form_tag('/static_pages/thank_you') do %>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <%= label_tag :name %>
+                <%= text_field_tag(:name, nil, class: "form-control", placeholder: "Enter Name") %>
+            </div>
+            <div class="form-group">
+                <%= label_tag :email, "Email Address" %>
+                <%= text_field_tag(:email, nil, class: "form-control", placeholder: "Enter Email") %>
+            </div>
+            <div class="form-group">
+                <%= label_tag :message, "Message" %>
+                <%= text_field_tag(:message, nil, size: '40', class: "form-control message-box", placeholder: "Enter Message") %>
+            </div>
+        </div>
+    </div>
+    <%= submit_tag "Send" %>
+<% end %>
