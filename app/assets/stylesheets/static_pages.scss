@@ -93,3 +93,19 @@ form {
 .row {
     text-align: left;
 }
+
+.nav li a {
+    line-height: 20px;
+    padding-top: 17px;
+    color: #777;
+    font-family: 'Comfortaa', cursive;
+}
+
+.nav li a:focus, .nav li a:hover {
+    color: #333;
+    background-color: transparent;
+}
+
+.leftlinks {
+    margin-left: 40px;
+}
