@@ -24,6 +24,47 @@
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
+<br>
+<div class="ratings">
+  <div class="rateHead">
+    <h4 class="col-sm-12 col-md-6 col-lg-6">
+      <%= @product.highest_rating_comment.user %>
+    </h4>
+    <% if @product.highest_rating_comment.rating === 5 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+    <% elsif @product.highest_rating_comment.rating === 4 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+    <% elsif @product.highest_rating_comment.rating === 3 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+    <% elsif @product.highest_rating_comment.rating === 2 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+    <% elsif @product.highest_rating_comment.rating === 1 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+    <% end %>
+  </div>
+  <p class="rateBody col-sm-12 col-md-12 col-lg-12">"<%= @product.highest_rating_comment.body %>"</p>
+</div>
+<br>
+<div class="ratings">
+  <div class="rateHead">
+    <h4 class="col-sm-12 col-md-6 col-lg-6">
+      <%= @product.lowest_rating_comment.user %>
+    </h4>
+    <% if @product.lowest_rating_comment.rating === 5 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+    <% elsif @product.lowest_rating_comment.rating === 4 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+    <% elsif @product.lowest_rating_comment.rating === 3 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+    <% elsif @product.lowest_rating_comment.rating === 2 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+    <% elsif @product.lowest_rating_comment.rating === 1 %>
+      <div class="stars col-sm-12 col-md-6 col-lg-6"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+    <% end %>
+  </div>
+  <p class="rateBody col-sm-12 col-md-12 col-lg-12">"<%= @product.lowest_rating_comment.body %>"</p>
+</div>
+<br>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

@@ -6,4 +6,13 @@ class Product < ApplicationRecord
             Product.where("name ILIKE ?", "%#{search_term}%")
         end
     end
+    
+    def highest_rating_comment
+        Comment.rating_desc.first
+    end
+    
+    def lowest_rating_comment
+        Comment.rating_asc.first
+    end
+    
 end
