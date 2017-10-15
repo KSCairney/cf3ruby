@@ -73,8 +73,8 @@ nav-bar {
 }
 
 footer {
-    position: absolute;
     bottom: 0;
+    float: right;
 }
 
 .searching {
@@ -123,4 +123,8 @@ form {
 .rateHead {
     display: inline-block;
     width: 100%;
+}
+
+.product-reviews{
+    margin-left: 30px;
 }

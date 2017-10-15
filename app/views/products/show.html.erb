@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div class="col-md-6 col-sm-12">
+  <%= image_tag(@product.image_url, class: "img-responsive") %>
+</div>
+<div class="col-md-6 col-sm-12">
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -24,7 +28,12 @@
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
+</div>
 <br>
+<br>
+<%= render 'new_comment' %>
+<br>
+<%= render 'comments' %>
 <div class="ratings">
   <div class="rateHead">
     <h4 class="col-sm-12 col-md-6 col-lg-6">
