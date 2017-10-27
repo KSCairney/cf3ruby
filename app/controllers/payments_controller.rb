@@ -11,7 +11,7 @@ class PaymentsController < ApplicationController
         @product = Product.find(params[:product_id])
         # Create the charge on Stripe's servers - this will charge the user's card
         begin
-            charge = Stripe::Charge:create(
+            charge = Stripe::Charge.create (
                 amount: (@product.price*100).to_i,
                 currency: "usd",
                 source: token,
