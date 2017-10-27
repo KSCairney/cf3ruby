@@ -8,4 +8,12 @@ FactoryGirl.define do
         last_name "Test"
         admin false
     end
+    
+    factory :admin, class: User do
+        email
+        password "1234567890"
+        first_name "Ian"
+        last_name "Curtis"
+        admin true
+    end
 end
