@@ -1,5 +1,4 @@
 class PaymentsController < ApplicationController
-    before_action :authenticate_user!
     
     def create
         if user_signed_in?
@@ -11,12 +10,13 @@ class PaymentsController < ApplicationController
         @product = Product.find(params[:product_id])
         # Create the charge on Stripe's servers - this will charge the user's card
         begin
-            charge = Stripe::Charge.create (
-                amount: (@product.price*100).to_i,
+            charge = Stripe::Charge.create(
+                amount: @product.price*100,
                 currency: "usd",
                 source: token,
                 description: params[:stripeEmail]
             )
+        
             if charge.paid
                 Order.create(
                     product_id: @product_id,
