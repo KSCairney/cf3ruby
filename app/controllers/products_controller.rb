@@ -7,8 +7,10 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
+      logger.debug "Number of Search Results: #{@products.length}"
     else
       @products = Product.all.paginate(page: params[:page], per_page: 6)
+      logger.debug "Number of Products: #{@products.length}"
     end
   end
 
