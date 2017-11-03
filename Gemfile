@@ -66,3 +66,5 @@ gem 'rails-controller-testing'
 gem "factory_girl_rails", "~> 4.0"
 
 gem 'stripe'
+
+gem "brakeman", :require => false
