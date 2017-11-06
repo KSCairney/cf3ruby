@@ -16,3 +16,4 @@
 //= require jquery3
 //= require_tree .
 //= require jquery.raty
+//= require jquery.elevateZoom-3.0.8.min.js
