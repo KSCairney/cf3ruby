@@ -30,7 +30,7 @@
   <%= render partial: "shared/stripe_checkout_button" %>
 <% end %>
 
-<p class="shown">Average Rating: <div class="rated shown" data-score="<%= @product.average_rating %>"></div></p>
+<p class="shown">Average Rating: <div class="rated shown" id="average_rating" data-score="<%= @product.average_rating %>"></div></p>
 <br>
 <br>
 <%= render 'new_comment' %>
