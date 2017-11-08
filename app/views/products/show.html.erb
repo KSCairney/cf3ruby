@@ -2,15 +2,17 @@
 
 <div class="shown">
 <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "350", class: "img-responsive img-zoom") %>
-<p class="shown">
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p class="shown">
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<% cache @product do %>
+  <p class="shown">
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
+  
+  <p class="shown">
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+<% end %>
 
 <p class="shown">
   <strong>Image url:</strong>
