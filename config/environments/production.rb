@@ -87,4 +87,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   config.assets.compile = true
+  
+  config.web_socket_server_url = "wss://kscbikeberlin.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://ykscbikeberlin.herokuapp.com', 'http://kscbikeberlin.herokuapp.com']
 end
