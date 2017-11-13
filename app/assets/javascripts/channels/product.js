@@ -7,8 +7,8 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     // Called when the subscription has been terminated by the server
   },
 
-  received: function(data) {
+  received: function() {
     // Called when there's incoming data on the websocket for this channel
-    $(".alert.alert-info").show();
+      $(".alert.alert-info").show();
   }
 });
